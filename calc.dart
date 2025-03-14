@@ -1,4 +1,5 @@
 import 'dart:io';
+import "funktionen.dart";
 
 void main() {
   print("Dein schlauer Taschenrechner");
@@ -19,16 +20,16 @@ void main() {
   String operator1 = stdin.readLineSync() ?? "";
   switch (operator1) {
     case "+":
-      ergebnis = number1 + number2;
+      ergebnis = addition(number1, number2);
 
     case "-":
-      ergebnis = number1 - number2;
+      ergebnis = subtract(number1, number2);
 
     case "*":
-      ergebnis = number1 * number2;
+      ergebnis = multiplication(number1, number2);
 
     case "/":
-      ergebnis = number1 / number2;
+      ergebnis = division(number1, number2);
     default:
   }
 
